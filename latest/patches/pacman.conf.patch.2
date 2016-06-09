@@ -1,0 +1,8 @@
+--- /etc/pacman.conf.origin2	2016-06-09 01:37:42.017114203 +0000
++++ /etc/pacman.conf	2016-06-09 01:38:26.047717113 +0000
+@@ -104,4 +104,4 @@
+ Server = http://repo.archlinux.fr/$arch
+ 
+ [archstrike]
+-Server = https://mirror.archstrike.org/$arch/$repo
++Include = /etc/pacman.d/archstrike-mirrorlist
