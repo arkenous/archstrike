@@ -3,3 +3,24 @@
 [![Docker Stars](https://img.shields.io/docker/stars/trileg/archstrike.svg?maxAge=2592000)](https://hub.docker.com/r/trileg/archstrike/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/trileg/archstrike.svg?maxAge=2592000)](https://hub.docker.com/r/trileg/archstrike/)
 [![AMA](https://img.shields.io/badge/ask%20me-anything-0e7fc0.svg)](https://github.com/trileg/ama)
+
+This docker image is finished setup ArchStrike base system refer to [Wiki: Setup - ArchStrike](https://archstrike.org/wiki/setup).
+This image doesn't install any ArchStrike packages, so you need to install it if you want to use it.
+
+####How to install all packages belong to archstrike group
+Run below command if you want to install all packages belong to archstrike group (`pacman -Sg archstrike`).
+
+```
+# pacman -Syu archstrike
+```
+
+If you receive below message, you probably should type `y` to install ArchStrike packages properly.
+- :: The following packages cannot be upgraded due to unresolvable dependencies:
+
+        bokken  chownat  cisco-torch  cuckoo  davtest  dnsenum  dotdotpwn  easy_creds  easyfuzzer  enum4linux
+        facebot-git  faraday-git  ftester  golismero-git  guymager  inundator  jboss-autopwn-git  mitmf-git  snort
+        webrute  xmount  xsscrapy-git  xsser
+
+  :: Do you want to skip the above packages for this upgrade? [y/N] y
+
+- :: gcc-libs-multilib and gcc-libs are in conflict. Remove gcc-libs? [y/N] y
