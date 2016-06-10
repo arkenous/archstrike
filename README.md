@@ -12,16 +12,8 @@ This image doesn't install any ArchStrike packages, so you need to install it if
 Run below command if you want to install all packages belong to archstrike group (`pacman -Sg archstrike`).
 
 ```
-# pacman -Syu archstrike
+# pacman -Syuu archstrike
 ```
 
-If you receive below message, you probably should type `y` to install ArchStrike packages properly.
-- :: The following packages cannot be upgraded due to unresolvable dependencies:
-
-        bokken  chownat  cisco-torch  cuckoo  davtest  dnsenum  dotdotpwn  easy_creds  easyfuzzer  enum4linux
-        facebot-git  faraday-git  ftester  golismero-git  guymager  inundator  jboss-autopwn-git  mitmf-git  snort
-        webrute  xmount  xsscrapy-git  xsser
-
-  :: Do you want to skip the above packages for this upgrade? [y/N] y
-
+If you receive below message, type `y` to install ArchStrike packages properly.
 - :: gcc-libs-multilib and gcc-libs are in conflict. Remove gcc-libs? [y/N] y
