@@ -12,7 +12,7 @@ This image doesn't install any ArchStrike packages, so you need to install it if
 Run below command if you want to install all packages belong to archstrike group (`pacman -Sg archstrike`).
 
 ```
-# pacman -Syuu archstrike
+# pacman -Syyu archstrike
 ```
 
 If you receive below message, type `y` to install ArchStrike packages properly.
