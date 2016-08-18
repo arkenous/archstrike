@@ -1,5 +1,7 @@
 # Docker Image of ArchStrike
 [![Build Status](https://travis-ci.org/trileg/archstrike.svg?branch=master)](https://travis-ci.org/trileg/archstrike)
+[![](https://images.microbadger.com/badges/image/trileg/archstrike.svg)](http://microbadger.com/images/trileg/archstrike "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/trileg/archstrike.svg)](http://microbadger.com/images/trileg/archstrike "Get your own version badge on microbadger.com")
 [![Docker Stars](https://img.shields.io/docker/stars/trileg/archstrike.svg?maxAge=3600)](https://hub.docker.com/r/trileg/archstrike/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/trileg/archstrike.svg?maxAge=3600)](https://hub.docker.com/r/trileg/archstrike/)
 [![AMA](https://img.shields.io/badge/ask%20me-anything-0e7fc0.svg)](https://github.com/trileg/ama)
