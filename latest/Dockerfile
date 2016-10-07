@@ -2,8 +2,6 @@
 FROM trileg/arch-base:latest
 MAINTAINER Kensuke Kosaka <kosaka@trileg.net>
 
-RUN pacman -Syu --noconfirm patch &> /dev/null
-
 COPY patches/pacman.conf.patch.1 /tmp/pacman.conf.patch.1
 RUN patch -u /etc/pacman.conf < /tmp/pacman.conf.patch.1 && rm -f /tmp/pacman.conf.patch.1
 RUN pacman -Syy &> /dev/null
