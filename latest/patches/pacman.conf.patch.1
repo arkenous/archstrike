@@ -1,6 +1,6 @@
---- /etc/pacman.conf.origin	2016-06-09 01:22:47.241793973 +0000
-+++ /etc/pacman.conf	2016-06-09 01:23:21.083824073 +0000
-@@ -90,8 +90,8 @@
+--- pacman.conf.origin	2016-12-10 05:59:17.493038044 +0000
++++ pacman.conf	2016-12-10 06:01:09.057684215 +0000
+@@ -90,11 +90,14 @@
  #[multilib-testing]
  #Include = /etc/pacman.d/mirrorlist
  
@@ -11,9 +11,9 @@
  
  # An example of a custom package repository.  See the pacman manpage for
  # tips on creating your own repositories.
-@@ -103,3 +103,5 @@
- SigLevel = Never
- Server = http://repo.archlinux.fr/$arch
- 
+ #[custom]
+ #SigLevel = Optional TrustAll
+ #Server = file:///home/custompkgs
++
 +[archstrike]
 +Server = https://mirror.archstrike.org/$arch/$repo
