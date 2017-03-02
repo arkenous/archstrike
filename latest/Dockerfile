@@ -1,6 +1,6 @@
 ## -*- docker-image-name: "trileg/archstrike" -*-
 FROM trileg/arch-base:latest
-MAINTAINER Kensuke Kosaka <kosaka@trileg.net>
+MAINTAINER Kensuke Kosaka <k@trileg.net>
 
 COPY patches/pacman.conf.patch.1 /tmp/pacman.conf.patch.1
 RUN patch -u /etc/pacman.conf < /tmp/pacman.conf.patch.1 && rm -f /tmp/pacman.conf.patch.1
