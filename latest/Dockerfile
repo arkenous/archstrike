@@ -7,10 +7,10 @@ RUN patch -u /etc/pacman.conf < /tmp/pacman.conf.patch.1 && \
   rm -f /tmp/pacman.conf.patch.1 && \
   pacman -Syy &> /dev/null
 
-RUN pacman-key --init &> /dev/null && \
+RUN NEXT_WAIT_TIME=0; until pacman-key --init &> /dev/null && \
   dirmngr < /dev/null &> /dev/null && \
   pacman-key -r 7CBC0D51 &> /dev/null && \
-  pacman-key --lsign-key 7CBC0D51 &> /dev/null
+  pacman-key --lsign-key 7CBC0D51 &> /dev/null || [ $NEXT_WAIT_TIME -eq 4 ]; do sleep $(( NEXT_WAIT_TIME++ )); done
 
 RUN pacman -S --noconfirm archstrike-keyring &> /dev/null && \
   pacman -S --noconfirm archstrike-mirrorlist &> /dev/null
